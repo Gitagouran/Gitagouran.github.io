@@ -1,0 +1,70 @@
+/* Text logo instead of the template's image logo */
+header .logo a {
+	font: 700 1.8rem/1 "poppins-bold", sans-serif;
+	color: #FFFFFF;
+	background: none;
+	width: auto;
+	height: auto;
+	letter-spacing: .15rem;
+	text-transform: uppercase;
+}
+/* Simple tag lists in the MORE cards */
+.service .desc { line-height: 2.4rem; }
+/* Contact links */
+#contact .contact-info a { color: #FFFFFF; }
+#contact .contact-info a:hover { color: #05BCA9; }
+footer .credit { color: rgba(255,255,255,.4); font-size: 1.3rem; }
+footer .credit a { color: rgba(255,255,255,.6); }
+
+/* "What I bring" section: three fit cards + feature band (replaces the carousel) */
+#services .section-intro .lead { color: rgba(255,255,255,.65); max-width: 640px; margin: 1.5rem auto 0; }
+.fit-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 2.4rem;
+	position: relative;
+	z-index: 2;
+	margin-top: 1rem;
+}
+.fit-card {
+	background: rgba(255,255,255,.04);
+	border: 1px solid rgba(255,255,255,.12);
+	border-radius: 6px;
+	padding: 3.6rem 3rem 3rem;
+	text-align: left;
+	min-width: 0;
+}
+.fit-icon {
+	display: inline-flex; align-items: center; justify-content: center;
+	width: 5.2rem; height: 5.2rem; border-radius: 50%;
+	background: rgba(255, 0, 119, .14); color: #ff0077; font-size: 2.2rem;
+	margin-bottom: 2rem;
+}
+.fit-card h3 { color: #FFFFFF; font-size: 2rem; margin: 0 0 1rem; }
+.fit-line { color: rgba(255,255,255,.75); font-size: 1.55rem; line-height: 2.6rem; margin-bottom: 2rem; }
+.fit-proof { list-style: none; margin: 0; padding: 2rem 0 0; border-top: 1px solid rgba(255,255,255,.12); }
+.fit-proof li {
+	color: rgba(255,255,255,.6); font-size: 1.45rem; line-height: 2.4rem;
+	padding-left: 1.8rem; position: relative; margin-bottom: 1rem;
+}
+.fit-proof li::before { content: ""; position: absolute; left: 0; top: 1rem; width: .7rem; height: .7rem; border-radius: 50%; background: #ff0077; }
+.fit-proof strong { color: #FFFFFF; font-family: "poppins-bold", sans-serif; }
+.feature-band {
+	position: relative; z-index: 2;
+	margin-top: 4.8rem; padding: 3.6rem 4rem;
+	border: 1px solid rgba(255,255,255,.12); border-radius: 6px;
+	display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap;
+	text-align: left;
+}
+.feature-text { max-width: 640px; }
+.feature-text h5 { color: #ff0077; margin-bottom: .6rem; }
+.feature-text h3 { color: #FFFFFF; margin: 0 0 1rem; }
+.feature-text p { color: rgba(255,255,255,.7); margin: 0; }
+.feature-text strong { color: #FFFFFF; }
+.feature-band .button { margin: 0; color: #FFFFFF; border-color: rgba(255,255,255,.5); }
+@media only screen and (max-width: 900px) {
+	.fit-grid { grid-template-columns: 1fr; max-width: 560px; margin-left: auto; margin-right: auto; }
+	.feature-band { padding: 3rem 2.4rem; }
+}
+/* the template's .row clearfix pseudo-elements would become grid cells */
+.row.fit-grid::before, .row.fit-grid::after { content: none; display: none; }
